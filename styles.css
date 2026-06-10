@@ -1232,6 +1232,7 @@ th {
     min-height: 24rem;
   }
 
+<<<<<<< HEAD
   .section-title {
     flex-wrap: wrap;
     gap: 0.35rem 0.75rem;
@@ -1248,6 +1249,9 @@ th {
     grid-template-columns: 1fr;
   }
 
+=======
+  .board-header,
+>>>>>>> 40f3a6e857caf3d560c0e7e75ef725a8619a8903
   .matchup {
     grid-template-columns: 1fr;
   }
@@ -1257,6 +1261,7 @@ th {
   }
 
   .nav-actions {
+<<<<<<< HEAD
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1417,5 +1422,14 @@ th {
 
   .table-wrap td:nth-child(7)::before {
     content: "Date";
+=======
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-actions button,
+  .action-row button {
+    width: 100%;
+>>>>>>> 40f3a6e857caf3d560c0e7e75ef725a8619a8903
   }
 }
