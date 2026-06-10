@@ -64,6 +64,18 @@
     p("Piyush Chawla", "MI", 2023, "Leg Spinner", 36, 81, 70, 62, false, false, "B", "spin", 77),
     p("Akash Madhwal", "MI", 2023, "Death Bowler", 12, 76, 68, 50, false, false, "C", "pace", 72),
 
+    p("Rohit Sharma", "MI", 2019, "Opener Captain", 90, 18, 84, 95, false, false, "S", "none", 89),
+    p("Quinton de Kock", "MI", 2019, "Wicketkeeper Opener", 87, 8, 82, 66, true, true, "A", "none", 85),
+    p("Suryakumar Yadav", "MI", 2019, "Middle Order", 88, 18, 84, 68, false, false, "A", "none", 86),
+    p("Ishan Kishan", "MI", 2019, "Wicketkeeper Batter", 80, 8, 78, 60, false, true, "B", "none", 79),
+    p("Hardik Pandya", "MI", 2019, "Pace All-rounder", 88, 82, 86, 84, false, false, "S", "pace", 89),
+    p("Kieron Pollard", "MI", 2019, "Finisher", 88, 72, 88, 82, true, false, "S", "pace", 87),
+    p("Krunal Pandya", "MI", 2019, "Spin All-rounder", 74, 80, 82, 72, false, false, "B", "spin", 78),
+    p("Rahul Chahar", "MI", 2019, "Leg Spinner", 20, 82, 72, 56, false, false, "B", "spin", 78),
+    p("Jasprit Bumrah", "MI", 2019, "Death Bowler", 16, 97, 82, 80, false, false, "S", "pace", 93),
+    p("Lasith Malinga", "MI", 2019, "Yorker Specialist", 18, 94, 78, 72, true, false, "S", "pace", 90),
+    p("Mitchell McClenaghan", "MI", 2019, "Left Arm Pace", 14, 80, 72, 56, true, false, "B", "pace", 76),
+
     p("MS Dhoni", "CSK", 2011, "Wicketkeeper Captain", 88, 8, 86, 99, false, true, "S", "none", 90),
     p("Suresh Raina", "CSK", 2011, "Top Order", 89, 42, 88, 78, false, false, "S", "spin", 88),
     p("Michael Hussey", "CSK", 2011, "Opener", 86, 4, 78, 72, true, false, "A", "none", 83),
