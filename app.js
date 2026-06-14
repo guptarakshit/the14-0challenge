@@ -398,10 +398,18 @@
       '<h2>' + run.wins + '-' + run.losses + '</h2>',
       '<strong class="grade">' + escapeHtml(run.grade) + '</strong>',
       '<p>' + escapeHtml(run.teamName) + ' captained by ' + escapeHtml(run.captain) + '</p>',
-      '<div class="action-row">',
-      '<button class="primary" data-action="save-results" type="button"' + (state.savedRunId === run.id ? " disabled" : "") + '>' + (state.savedRunId === run.id ? "Saved" : "Save Results") + '</button>',
-      '<button class="secondary" data-action="new-run" type="button">New Run</button>',
+      '<div class="action-row">' +
+        '<button class="primary" data-action="save-results" type="button"' + (state.savedRunId === run.id ? ' disabled' : '') + '>' +
+          (state.savedRunId === run.id ? 'Saved' : 'Save Results') +
+        '</button>' +
+        '<button class="secondary" data-action="share-results" type="button">' +
+          'Share Result' +
+        '</button>' +
+        '<button class="secondary" data-action="new-run" type="button">' +
+          'New Run' +
+        '</button>' +
       '</div>',
+
       '</div>',
       '<div class="panel"><div class="section-title"><span>Awards</span></div>' + renderAwards(run.awards) + '</div>',
       '<div class="panel"><div class="section-title"><span>Achievements</span></div>' + renderRunAchievements(run.achievements) + '</div>',
@@ -653,6 +661,36 @@
     render();
   }
 
+function shareResults() {
+  if (!state.run) return;
+
+  var team = state.run.finalXI
+    .map(function(player) {
+      return player.name;
+    })
+    .join(", ");
+
+  var text =
+`🏏 The 14-0 Challenge
+
+Record: ${state.run.wins}-${state.run.losses}
+Grade: ${state.run.grade}
+
+Captain: ${state.run.captain}
+Team Rating: ${state.run.teamRating}
+
+XI:
+${team}
+
+Can you beat my run?
+
+https://the14-0challenge.netlify.app`;
+
+  navigator.clipboard.writeText(text);
+  alert("Result copied to clipboard!");
+}
+
+
   function resetToHome() {
     state.screen = "identity";
     state.draft = null;
@@ -694,6 +732,7 @@
     }
     if (action === "simulate-match") simulateNextMatch();
     if (action === "save-results") saveResults();
+    if (action === "share-results") shareResults();
     if (action === "new-run") resetToHome();
     if (action === "leaderboard") {
       state.screen = "leaderboard";
